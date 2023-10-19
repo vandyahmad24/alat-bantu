@@ -116,3 +116,10 @@ func FormatKode(input int) string {
 	formatted := fmt.Sprintf("%04d", input)
 	return formatted
 }
+
+func Int64PtrToZero(i *int64) int64 {
+	if i == nil {
+		return 0
+	}
+	return *i
+}

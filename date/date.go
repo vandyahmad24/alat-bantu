@@ -1,7 +1,8 @@
 package date
 
+import "time"
 
-// GetEnv : Simple helper function to generate future time 
+// GetEnv : Simple helper function to generate future time
 func GenerateFutureTimeSeconds(seconds int) time.Time {
 	now := time.Now()
 	future := now.Add(time.Duration(seconds) * time.Second)
@@ -19,7 +20,6 @@ func ChangeStringToTime(dateString string) (time.Time, error) {
 
 	return date, nil
 }
-
 
 // change time.Time to 2006-01-02
 func ChangeTimeToString(timeReq time.Time) string {
